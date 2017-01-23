@@ -1,0 +1,5 @@
+D:\Projects\DentedLotus\Client\bin\Client.dll
+D:\Projects\DentedLotus\Client\bin\Client.pdb
+D:\Projects\DentedLotus\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Projects\DentedLotus\Client\obj\Debug\Client.dll
+D:\Projects\DentedLotus\Client\obj\Debug\Client.pdb
