@@ -151,6 +151,7 @@ gulp.task('build', [], function (cb) {
 // Launch a lightweight HTTP Server
 gulp.task('serve', function (cb) {
 
+     run("npm run webpack").exec();
   watch = true;
   browserSync.init({
     server: {
