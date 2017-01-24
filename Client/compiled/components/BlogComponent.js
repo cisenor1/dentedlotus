@@ -11,16 +11,21 @@ var BlogComponent = (function (_super) {
      *
      */
     function BlogComponent(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = { blogs: [] };
+        _this.props.stateManager.getBlogs().then(function (blogs) {
+            _this.setState({ blogs: blogs });
+        });
+        return _this;
     }
     BlogComponent.prototype.render = function () {
         var out = [];
-        this.props.blogs.forEach(function (blog) {
+        this.state.blogs.forEach(function (blog) {
             out.push(React.createElement("li", { className: "blog-entry" },
                 React.createElement("div", null,
                     React.createElement("div", { className: "date" }, blog.date),
                     React.createElement("div", { className: "title" }, blog.title),
-                    React.createElement("div", { className: "message" }, blog.message),
+                    React.createElement("div", { className: "m essage" }, blog.message),
                     React.createElement("div", { className: "author" }, blog.author))));
         });
         return React.createElement("ul", null, out);

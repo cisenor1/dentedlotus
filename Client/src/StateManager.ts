@@ -1,6 +1,7 @@
 import {Blog} from "./models/Blog";
-export class StateManager{
-    currentUser;
+import {Promise} from "bluebird";
+import {User} from "./models/User";
+export class StateManager{ 
     nextRace;
     
     blogs:Blog[] = [
@@ -16,10 +17,23 @@ export class StateManager{
             message:"What have we done?!",
             title: "SEPTEMBER!!!"
         }
-    ]
+    ];
 
-    getBlogs():Blog[]{
-        return this.blogs.sort((a:Blog, b:Blog)=>{return b.date.localeCompare(a.date)});
+    currentUser:User = new User();
+
+    /**
+     *  Query for blog posts.
+     *  returns Blog[]
+     */
+    getBlogs(whereClause?:string):Promise<Blog[]>{
+        return Promise.resolve(this.blogs.sort((a:Blog, b:Blog)=>{return b.date.localeCompare(a.date)}));
+    }
+
+    /**
+     * Get the currently logged in user.
+     */
+    getUser() : Promise<User>{
+        return Promise.resolve(this.currentUser);
     }
 
 }

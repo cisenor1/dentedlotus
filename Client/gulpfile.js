@@ -163,8 +163,11 @@ gulp.task('serve', function (cb) {
     console.log("Caught a change in compiled");
      run("npm run webpack").exec();
   });
+  gulp.watch('./style.less').on("change", (f) => {
+    run("lessc ./style.less ./compiled/style.css").exec();
+  });
   gulp.watch('./dist/**/*.*', function (file) {
-    console.log("Refreshing Browser");
+    console.log("Refreshing Browser " + file.path);
     browserSync.reload(path.relative(__dirname, file.path));
   });
   cb();

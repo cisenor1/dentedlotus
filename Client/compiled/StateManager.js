@@ -1,4 +1,6 @@
 "use strict";
+var bluebird_1 = require("bluebird");
+var User_1 = require("./models/User");
 var StateManager = (function () {
     function StateManager() {
         this.blogs = [
@@ -15,9 +17,20 @@ var StateManager = (function () {
                 title: "SEPTEMBER!!!"
             }
         ];
+        this.currentUser = new User_1.User();
     }
-    StateManager.prototype.getBlogs = function () {
-        return this.blogs.sort(function (a, b) { return b.date.localeCompare(a.date); });
+    /**
+     *  Query for blog posts.
+     *  returns Blog[]
+     */
+    StateManager.prototype.getBlogs = function (whereClause) {
+        return bluebird_1.Promise.resolve(this.blogs.sort(function (a, b) { return b.date.localeCompare(a.date); }));
+    };
+    /**
+     * Get the currently logged in user.
+     */
+    StateManager.prototype.getUser = function () {
+        return bluebird_1.Promise.resolve(this.currentUser);
     };
     return StateManager;
 }());

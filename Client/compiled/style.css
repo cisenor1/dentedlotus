@@ -1,1 +1,99 @@
-body,html{padding:0;margin:0;color:#222}li{list-style:none}.blog-entry{width:30em;background-color:red;margin-bottom:1em;border-radius:3px;padding:1em;box-sizing:border-box}.blog-entry .date{width:100%;color:red;background-color:green}.blog-entry .title{font-size:32px}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-image: url("../dist/images/honda.jpg");
+  background-position: 0 -13em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.background {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.blog-entry {
+  width: 60em;
+  background-color: red;
+  margin-bottom: 1em;
+  border-radius: 2px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.blog-entry .date {
+  width: 100%;
+  background-color: yellow;
+}
+.blog-entry .title {
+  font-size: 32px;
+}
+.banner {
+  background: black;
+  margin-top: 0;
+  display: block;
+  height: 3.5em;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #848484;
+}
+.banner h1 {
+  display: inline-block;
+  width: 55%;
+  height: 3.5rem;
+  /* line-height: 3.5rem; */
+  padding-top: 10px;
+  margin-left: 1em;
+}
+.banner .race-countdown {
+  display: inline-block;
+  height: 100%;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.banner .login,
+.banner .logout {
+  height: 100%;
+  width: 4em;
+  line-height: 3.5em;
+  box-sizing: border-box;
+  float: right;
+}
+.banner .login button,
+.banner .logout button {
+  height: 2em;
+  line-height: 2em;
+}
+.menu {
+  height: 100%;
+  line-height: 100%;
+  margin: 0;
+  background-color: rgba(41, 45, 54, 0.89);
+  width: 37%;
+  float: right;
+  width: 34%;
+  padding: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.menu li {
+  display: inline-block;
+  width: 30%;
+  line-height: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.menu li:hover {
+  background: #848628;
+  cursor: pointer;
+}
