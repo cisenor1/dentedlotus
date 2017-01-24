@@ -4,4 +4,4 @@
 **/packages
 **/obj
 **/bin
-Server/**/*.js
+/Server/**/*.js
