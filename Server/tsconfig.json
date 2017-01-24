@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "umd",
+        "target": "es2015",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "outDir": ".",
+        "baseUrl": "."
+    },
+    "include": [
+        "app.ts",
+        "utilities/",
+        "routes/"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
