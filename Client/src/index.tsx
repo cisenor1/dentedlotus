@@ -1,21 +1,22 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
- 
+
 import { Banner } from "./components/Banner";
 import { UserComponent } from "./components/User";
 import { StateManager } from "./StateManager";
 import { BlogComponent } from "./components/BlogComponent";
-import {Menu} from "./components/widgets/Menu";
+import { HeaderSection } from "./components/HeaderSection";
+import { RaceCountdown } from "./components/widgets/RaceCountdown";
 
 let stateManager = new StateManager();
 
 ReactDOM.render(
     <div>
-        <div className="background"></div>
         <Banner stateManager={stateManager} title="Project Dented Lotus" />
-        <Menu stateManager={stateManager} />
-        <div className="homepage">
+        <HeaderSection stateManager={stateManager} />
+        <div className="wrapper">
             <div>
+                <RaceCountdown stateManager={stateManager} displayName={stateManager.nextRace.displayName} cutoffDate={stateManager.nextRace.date} />
                 <BlogComponent stateManager={stateManager} />
             </div>
         </div>

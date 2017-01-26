@@ -33,11 +33,11 @@ var LoginLogout = (function (_super) {
         var _this = this;
         if (this.state.loggedIn) {
             return React.createElement("div", { className: "logout" },
-                React.createElement("button", { onClick: function () { _this.logout(); } }, "Log Out"));
+                React.createElement("span", { onClick: function () { _this.logout(); } }, "Log Out"));
         }
         else {
             return React.createElement("div", { className: "login" },
-                React.createElement("button", { onClick: function () { _this.login(); } }, "Log In"));
+                React.createElement("span", { onClick: function () { _this.login(); } }, "Log In"));
         }
     };
     return LoginLogout;

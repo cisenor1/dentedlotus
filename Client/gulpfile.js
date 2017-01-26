@@ -164,7 +164,11 @@ gulp.task('serve', function (cb) {
      run("npm run webpack").exec();
   });
   gulp.watch('./style.less').on("change", (f) => {
-    run("lessc ./style.less ./compiled/style.css").exec();
+    run("lessc ./style.less ./compiled/style.css").exec().on("error",(err)=>{
+
+      console.log(err.toString());
+      this.emit("end");
+    });
   });
   gulp.watch('./dist/**/*.*', function (file) {
     console.log("Refreshing Browser " + file.path);

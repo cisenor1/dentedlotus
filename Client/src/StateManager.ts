@@ -1,9 +1,7 @@
 import {Blog} from "./models/Blog";
 import {Promise} from "bluebird";
 import {User} from "./models/User";
-export class StateManager{ 
-    nextRace;
-    
+export class StateManager{  
     blogs:Blog[] = [
         {
                 author:"Craig",
@@ -18,6 +16,11 @@ export class StateManager{
             title: "SEPTEMBER!!!"
         }
     ];
+ 
+    nextRace = {
+        displayName: "Australian GP",
+        date: "March 26, 2017"
+    }
 
     currentUser:User = new User();
 
@@ -29,6 +32,10 @@ export class StateManager{
         return Promise.resolve(this.blogs.sort((a:Blog, b:Blog)=>{return b.date.localeCompare(a.date)}));
     }
 
+
+    getNextRace():Promise<{}>{
+        return Promise.resolve(this.nextRace);
+    }
     /**
      * Get the currently logged in user.
      */

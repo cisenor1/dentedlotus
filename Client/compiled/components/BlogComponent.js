@@ -22,13 +22,14 @@ var BlogComponent = (function (_super) {
         var out = [];
         this.state.blogs.forEach(function (blog) {
             out.push(React.createElement("li", { className: "blog-entry" },
-                React.createElement("div", null,
+                React.createElement("div", { className: "header" },
                     React.createElement("div", { className: "date" }, blog.date),
-                    React.createElement("div", { className: "title" }, blog.title),
-                    React.createElement("div", { className: "m essage" }, blog.message),
+                    React.createElement("div", { className: "title" }, blog.title)),
+                React.createElement("div", null,
+                    React.createElement("div", { className: "message" }, blog.message),
                     React.createElement("div", { className: "author" }, blog.author))));
         });
-        return React.createElement("ul", null, out);
+        return React.createElement("ul", { className: "blog-posts" }, out);
     };
     return BlogComponent;
 }(React.Component));

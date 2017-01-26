@@ -29,9 +29,9 @@ export class LoginLogout extends React.Component<LoginLogoutProps, any>{
     }
     render() {
         if (this.state.loggedIn) {
-            return <div className="logout"><button  onClick={() => { this.logout() }} >Log Out</button></div>
+            return <div className="logout"><span  onClick={() => { this.logout() }} >Log Out</span></div>
         } else {
-            return <div className="login"><button onClick={() => { this.login() }}>Log In</button></div>
+            return <div className="login"><span onClick={() => { this.login() }}>Log In</span></div>
         }
     }
 }

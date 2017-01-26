@@ -8,13 +8,17 @@ export interface RaceCountdownProps extends PropsBase{
 
 export class RaceCountdown extends React.Component<RaceCountdownProps,any>{
     interval;
+    nextRace;
     /**
      *
      */
     constructor(props:RaceCountdownProps) {
         super(props);
         this.state = {timeRemaining:0};
-        this.tick = this.tick.bind(this);
+        this.tick = this.tick.bind(this);  
+        this.props.stateManager.getNextRace().then((race)=>{
+            this.nextRace = race;
+        });
     }
 
     componentDidMount(){
@@ -27,7 +31,10 @@ export class RaceCountdown extends React.Component<RaceCountdownProps,any>{
     }    
     tick(){
 
-        let cutoffTime = moment(this.props.cutoffDate);
+        if (!this.nextRace){
+            return;
+        }
+        let cutoffTime = moment(this.nextRace.date);
         let now = moment();
         let timeRemaining =  cutoffTime.diff(now) ;
         let duration = moment.duration(timeRemaining,"milliseconds");
@@ -47,8 +54,11 @@ export class RaceCountdown extends React.Component<RaceCountdownProps,any>{
         output += strHours + ":"+ strMinutes + ":" + strSeconds;
         this.setState({timeRemaining:output });
     }
-    render(){
-        return <div className="race-countdown"><span>{this.props.displayName}</span>:<span>{this.state.timeRemaining}</span></div>
+    render(){ 
+        if (!this.nextRace){
+            return <span  className="race-countdown">Loading race countdown...</span>;
+        }
+        return <div className="race-countdown"><span>{this.nextRace.displayName}</span>:&nbsp;<span className="timer">{this.state.timeRemaining}</span><span className="button">Make Your Picks</span></div>
     }
 
 

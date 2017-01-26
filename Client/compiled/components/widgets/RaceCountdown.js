@@ -15,6 +15,9 @@ var RaceCountdown = (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.state = { timeRemaining: 0 };
         _this.tick = _this.tick.bind(_this);
+        _this.props.stateManager.getNextRace().then(function (race) {
+            _this.nextRace = race;
+        });
         return _this;
     }
     RaceCountdown.prototype.componentDidMount = function () {
@@ -24,7 +27,10 @@ var RaceCountdown = (function (_super) {
         setInterval(this.interval);
     };
     RaceCountdown.prototype.tick = function () {
-        var cutoffTime = moment(this.props.cutoffDate);
+        if (!this.nextRace) {
+            return;
+        }
+        var cutoffTime = moment(this.nextRace.date);
         var now = moment();
         var timeRemaining = cutoffTime.diff(now);
         var duration = moment.duration(timeRemaining, "milliseconds");
@@ -46,10 +52,14 @@ var RaceCountdown = (function (_super) {
         this.setState({ timeRemaining: output });
     };
     RaceCountdown.prototype.render = function () {
+        if (!this.nextRace) {
+            return React.createElement("span", { className: "race-countdown" }, "Loading race countdown...");
+        }
         return React.createElement("div", { className: "race-countdown" },
-            React.createElement("span", null, this.props.displayName),
-            ":",
-            React.createElement("span", null, this.state.timeRemaining));
+            React.createElement("span", null, this.nextRace.displayName),
+            ":\u00A0",
+            React.createElement("span", { className: "timer" }, this.state.timeRemaining),
+            React.createElement("span", { className: "button" }, "Make Your Picks"));
     };
     return RaceCountdown;
 }(React.Component));

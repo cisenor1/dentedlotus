@@ -3,4 +3,5 @@ export interface Blog{
     message: string;
     author:string;
     title:string;
+    imageUrl?:string;
 }

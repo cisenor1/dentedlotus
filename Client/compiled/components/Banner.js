@@ -6,23 +6,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var React = require("react");
 var LoginLogout_1 = require("./widgets/LoginLogout");
-var RaceCountdown_1 = require("./widgets/RaceCountdown");
+var Menu_1 = require("./widgets/Menu");
 ;
 var Banner = (function (_super) {
     __extends(Banner, _super);
     function Banner() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.nextRace = {
-            displayName: "Australian GP",
-            date: "March 26, 2017"
-        };
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     Banner.prototype.render = function () {
         return React.createElement("div", { className: "banner" },
             React.createElement("h1", null, this.props.title),
             React.createElement(LoginLogout_1.LoginLogout, { stateManager: this.props.stateManager }),
-            React.createElement(RaceCountdown_1.RaceCountdown, { stateManager: this.props.stateManager, displayName: this.nextRace.displayName, cutoffDate: this.nextRace.date }));
+            React.createElement(Menu_1.Menu, { stateManager: this.props.stateManager }));
     };
     return Banner;
 }(React.Component));

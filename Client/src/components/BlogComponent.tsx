@@ -24,15 +24,17 @@ export class BlogComponent extends React.Component<BlogProps, any>{
         this.state.blogs.forEach((blog) => {
             out.push(
                 <li className="blog-entry">
-                    <div>
+                    <div className="header">
                         <div className="date">{blog.date}</div>
                         <div className="title">{blog.title}</div>
-                        <div className="m essage">{blog.message}</div>
+                    </div>
+                    <div>
+                        <div className="message">{blog.message}</div>
                         <div className="author">{blog.author}</div>
                     </div>
                 </li>
             );
         });
-        return <ul>{out}</ul>;
+        return <ul className="blog-posts">{out}</ul>;
     }
 }

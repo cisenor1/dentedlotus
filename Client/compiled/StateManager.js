@@ -17,6 +17,10 @@ var StateManager = (function () {
                 title: "SEPTEMBER!!!"
             }
         ];
+        this.nextRace = {
+            displayName: "Australian GP",
+            date: "March 26, 2017"
+        };
         this.currentUser = new User_1.User();
     }
     /**
@@ -25,6 +29,9 @@ var StateManager = (function () {
      */
     StateManager.prototype.getBlogs = function (whereClause) {
         return bluebird_1.Promise.resolve(this.blogs.sort(function (a, b) { return b.date.localeCompare(a.date); }));
+    };
+    StateManager.prototype.getNextRace = function () {
+        return bluebird_1.Promise.resolve(this.nextRace);
     };
     /**
      * Get the currently logged in user.
