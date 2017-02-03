@@ -66,6 +66,7 @@
     "pretest": "npm install",
     "test": "karma start ./config/karma.js --single-run",
     "preupdate-webdriver": "npm install",
+    "deploy":"gulp deploy",
     "update-webdriver": "webdriver-manager update",
     "webpack": "webpack"
   }
