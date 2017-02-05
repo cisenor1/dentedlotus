@@ -144,36 +144,33 @@ gulp.task('bundle', function (cb) {
 });
 
 // Build the app from source code
-gulp.task('build', [], function (cb) {
-  //runSequence(['vendor', 'assets', 'images', 'pages', 'styles', 'bundle'], cb);
+gulp.task('serve-live', [], function (cb) {
 });
 
 // Launch a lightweight HTTP Server
-gulp.task('serve', function (cb) {
-
-     run("npm run webpack").exec();
+gulp.task('serve', function (cb) { 
+  run("npm run webpack").exec();
   watch = true;
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
+  // browserSync.init({
+  //   server: {
+  //     baseDir: "./"
+  //   }
+  // });
 
   gulp.watch('./compiled/**/*.*', function (file) {
     console.log("Caught a change in compiled");
      run("npm run webpack").exec();
   });
   gulp.watch('./style.less').on("change", (f) => {
-    run("lessc ./style.less ./compiled/style.css").exec().on("error",(err)=>{
-
-      console.log(err.toString());
+    run("lessc ./style.less ./dist/style.css").exec().on("error",(err)=>{  
       this.emit("end");
     });
   });
-  gulp.watch('./dist/**/*.*', function (file) {
-    console.log("Refreshing Browser " + file.path);
-    browserSync.reload(path.relative(__dirname, file.path));
-  });
+  // gulp.watch('./dist/**/*.*', function (file) {
+  //   console.log("Refreshing Browser " + file.path);
+  //   browserSync.reload(path.relative(__dirname, file.path));
+  // });
+  run("node app.js").exec();
   cb();
 });
 

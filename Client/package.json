@@ -6,7 +6,8 @@
   "repository": "https://github.com/kriasoft/react-starter-kit",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.2.0"
+    "bootstrap": "^3.2.0",
+    "express": "^4.14.1"
   },
   "devDependencies": {
     "@types/react": "^15.0.1",
@@ -62,12 +63,15 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "concurrently --kill-others \"gulp\" \"tsc -w\"",
+    "start": "node app.js",
+    "start-dev": "concurrently --kill-others \"gulp\" \"tsc -w\"",
+    "http": "http-server",
     "pretest": "npm install",
     "test": "karma start ./config/karma.js --single-run",
     "preupdate-webdriver": "npm install",
-    "deploy":"gulp deploy",
+    "deploy": "gulp deploy",
     "update-webdriver": "webdriver-manager update",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "compile": "tsc -v && tsc && echo Typescript compile complete && npm run webpack && echo Webpack complete"
   }
 }
