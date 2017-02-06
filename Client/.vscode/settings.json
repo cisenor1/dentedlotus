@@ -7,8 +7,8 @@
         "**/.DS_Store": true,
         "**/*.jsx":true,
         "compiled":true,
-        "dist":false,
-        "node_modules":true,
+        "dist":true,
+        "node_modules":false,
         "config":true
     }
 

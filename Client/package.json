@@ -7,7 +7,11 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.2.0",
-    "express": "^4.14.1"
+    "boron": "^0.2.3",
+    "express": "^4.14.1",
+    "file-loader": "^0.10.0",
+    "react-burger-menu": "^1.10.10",
+    "rodal": "^1.3.5"
   },
   "devDependencies": {
     "@types/react": "^15.0.1",
@@ -52,8 +56,10 @@
     "minimist": "^1.1.0",
     "protractor": "^1.3.0",
     "psi": "^0.1.2",
+    "react": "^15.4.2",
     "react-addons": "^0.9.1-deprecated",
     "react-addons-linked-state-mixin": "^15.4.2",
+    "react-dom": "^15.4.2",
     "run-sequence": "^0.3.7",
     "source-map-loader": "^0.1.6",
     "typescript": "^2.1.5",
@@ -62,7 +68,6 @@
     "webpack-dev-server": "^1.6.5"
   },
   "scripts": {
-    "prestart": "npm install",
     "start": "node app.js",
     "start-dev": "concurrently --kill-others \"gulp\" \"tsc -w\"",
     "http": "http-server",

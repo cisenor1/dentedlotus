@@ -3,6 +3,7 @@ var bluebird_1 = require("bluebird");
 var User_1 = require("./models/User");
 var StateManager = (function () {
     function StateManager() {
+        this.modalVisible = false;
         this.blogs = [
             {
                 author: "Craig",
@@ -22,7 +23,44 @@ var StateManager = (function () {
             date: "March 26, 2017"
         };
         this.currentUser = new User_1.User();
+        this._initGoogle();
+        this._initFacebook();
     }
+    StateManager.prototype._initGoogle = function () {
+        var _this = this;
+        if (!window["onSignIn"]) {
+            window["onSignIn"] = function (args) {
+                _this.currentUser = new User_1.GoogleUser(args);
+            };
+        }
+    };
+    StateManager.prototype._initFacebook = function () {
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1630122457296096',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    this.currentUser = new User_1.FacebookUser(response);
+                    return;
+                }
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    };
     /**
      *  Query for blog posts.
      *  returns Blog[]
@@ -38,6 +76,12 @@ var StateManager = (function () {
      */
     StateManager.prototype.getUser = function () {
         return bluebird_1.Promise.resolve(this.currentUser);
+    };
+    StateManager.prototype.setUser = function (user) {
+        this.currentUser = user;
+    };
+    StateManager.prototype.signOut = function () {
+        this.currentUser.logOut();
     };
     return StateManager;
 }());

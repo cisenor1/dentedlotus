@@ -10,13 +10,19 @@ var Menu_1 = require("./widgets/Menu");
 ;
 var Banner = (function (_super) {
     __extends(Banner, _super);
-    function Banner() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    /**
+     *
+     */
+    function Banner(props) {
+        var _this = _super.call(this, props) || this;
+        _this.stateManager = props.stateManager;
+        _this.onMenuClicked = props.onMenuClicked;
+        return _this;
     }
     Banner.prototype.render = function () {
         return React.createElement("div", { className: "banner" },
             React.createElement("h1", null, this.props.title),
-            React.createElement(LoginLogout_1.LoginLogout, { stateManager: this.props.stateManager }),
+            React.createElement(LoginLogout_1.LoginLogout, { onLogin: this.props.stateManager.setUser, onLogout: this.props.stateManager.signOut, stateManager: this.stateManager, onMenuClicked: this.onMenuClicked }),
             React.createElement(Menu_1.Menu, { stateManager: this.props.stateManager }));
     };
     return Banner;

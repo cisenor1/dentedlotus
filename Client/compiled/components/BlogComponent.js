@@ -21,7 +21,7 @@ var BlogComponent = (function (_super) {
     BlogComponent.prototype.render = function () {
         var out = [];
         this.state.blogs.forEach(function (blog) {
-            out.push(React.createElement("li", { className: "blog-entry" },
+            out.push(React.createElement("li", { className: "blog-entry", key: blog.title },
                 React.createElement("div", { className: "header" },
                     React.createElement("div", { className: "date" }, blog.date),
                     React.createElement("div", { className: "title" }, blog.title)),

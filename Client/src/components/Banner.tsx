@@ -6,13 +6,24 @@ import { Menu } from "./widgets/Menu";
 import * as moment from "moment";
 export interface BannerProps extends PropsBase {
     title: string;
+    onMenuClicked:()=>void;
 };
 
 export class Banner extends React.Component<BannerProps, any>{
+    stateManager;
+    onMenuClicked:()=>void;
+    /**
+     *
+     */
+    constructor(props:BannerProps) {
+        super(props);
+        this.stateManager = props.stateManager;
+        this.onMenuClicked = props.onMenuClicked;
+    }
     render() {
         return <div className="banner">
             <h1>{this.props.title}</h1>
-            <LoginLogout stateManager={this.props.stateManager} />
+            <LoginLogout onLogin={this.props.stateManager.setUser} onLogout={this.props.stateManager.signOut} stateManager={this.stateManager} onMenuClicked={this.onMenuClicked}/>
             <Menu stateManager={this.props.stateManager} />
         </div>;
     }
