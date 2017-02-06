@@ -4,7 +4,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/// <reference path="../../typings/globals/fb/index.d.ts" />  
 var User = (function () {
     function User() {
         this._loggedIn = false;
@@ -36,7 +35,7 @@ var GoogleUser = (function (_super) {
         // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         // console.log('Name: ' + profile.getName());
         // console.log('Image URL: ' + profile.getImageUrl());
-        // console.log('Email: ' + profile.getEmail());     
+        // console.log('Email: ' + profile.getEmail());  
     }
     GoogleUser.prototype.logOut = function () {
         var auth2 = gapi.auth2.getAuthInstance();

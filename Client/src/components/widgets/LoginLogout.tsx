@@ -1,5 +1,4 @@
-/// <reference path="../../../typings/globals/fb/index.d.ts" />
-declare var FB: FBSDK;
+
 import * as React from "react";
 import { StateManager } from "../../StateManager";
 import { PropsBase } from "../../utilities/Utilities";

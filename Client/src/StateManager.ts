@@ -1,4 +1,4 @@
-/// <reference path="../typings/globals/fb/index.d.ts" />
+
 import { Blog } from "./models/Blog";
 
 import { Promise } from "bluebird";

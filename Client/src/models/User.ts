@@ -1,6 +1,4 @@
-/// <reference path="../../typings/globals/fb/index.d.ts" />  
-declare var FB: FBSDK;
-declare var gapi:any;
+
 export class User {
     protected _loggedIn: boolean = false;
 
@@ -37,7 +35,7 @@ export class GoogleUser extends User {
         // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         // console.log('Name: ' + profile.getName());
         // console.log('Image URL: ' + profile.getImageUrl());
-        // console.log('Email: ' + profile.getEmail());     
+        // console.log('Email: ' + profile.getEmail());  
     }
 
     logOut() {

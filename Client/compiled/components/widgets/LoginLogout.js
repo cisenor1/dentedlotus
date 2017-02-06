@@ -4,7 +4,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/// <reference path="../../../typings/globals/fb/index.d.ts" />
 var React = require("react");
 var User_1 = require("../../models/User");
 var react_google_login_1 = require("react-google-login");
