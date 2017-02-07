@@ -31,11 +31,9 @@ var GoogleUser = (function (_super) {
         _this.lastName = profile.getFamilyName();
         _this.imageUrl = profile.getImageUrl();
         _this._loggedIn = true;
+        // !TEMP! just for testing purposes
+        window["googleLogOut"] = _this.logOut;
         return _this;
-        // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        // console.log('Name: ' + profile.getName());
-        // console.log('Image URL: ' + profile.getImageUrl());
-        // console.log('Email: ' + profile.getEmail());  
     }
     GoogleUser.prototype.logOut = function () {
         var auth2 = gapi.auth2.getAuthInstance();

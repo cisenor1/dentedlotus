@@ -32,10 +32,9 @@ export class GoogleUser extends User {
         this.lastName = profile.getFamilyName();
         this.imageUrl = profile.getImageUrl();
         this._loggedIn = true;
-        // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        // console.log('Name: ' + profile.getName());
-        // console.log('Image URL: ' + profile.getImageUrl());
-        // console.log('Email: ' + profile.getEmail());  
+
+        // !TEMP! just for testing purposes
+        window["googleLogOut"] = this.logOut; 
     }
 
     logOut() {
