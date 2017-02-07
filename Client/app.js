@@ -3,10 +3,6 @@
 // To access secured routes, an Authorization header must be set. 
 // ex: Authorization: Bearer <TOKEN>
 'use strict';
-var port = 32187;
-// const express = require('express');
-// const app = express();
-// app.use(express.static("dist"));
 var hapi_1 = require("hapi");
 var config_1 = require("./app/config");
 var hapiAuthJwt = require("hapi-auth-jwt");
@@ -18,10 +14,6 @@ var users_1 = require("./app/routes/users");
 var blogs_1 = require("./app/routes/blogs");
 // Start the server
 var PORT = process.env.PORT || 8080;
-// app.listen(PORT, () => {
-//   console.log(`App listening on port ${PORT}`);
-//   console.log('Press Ctrl+C to quit.');
-// });
 var server = new hapi_1.Server();
 server.connection({ port: PORT });
 server.register([{

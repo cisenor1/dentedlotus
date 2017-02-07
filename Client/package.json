@@ -66,7 +66,6 @@
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
     "gulp-webpack": "^1.5.0",
-    "http-server": "^0.9.0",
     "jshint": "^2.5.6",
     "jshint-loader": "^0.8.0",
     "jshint-stylish": "^1.0.0",
@@ -97,15 +96,15 @@
   "scripts": {
     "start": "node app.js",
     "start-dev": "concurrently --kill-others \"gulp\" \"tsc -w\"",
-    "http": "http-server",
     "pretest": "npm install",
     "test": "karma start ./config/karma.js --single-run",
     "preupdate-webdriver": "npm install",
     "deploy": "gulp deploy",
     "update-webdriver": "webdriver-manager update",
-    "webpack": "webpack",
+    "webpack": "webpack && echo Webpack complete",
     "copy-static-files": "cpy index.html dist",
-    "compile:less": "lessc style.less dist/style.css",
-    "compile": "tsc -v && tsc && echo Typescript compile complete && npm run webpack && echo Webpack complete"
+    "compile-less": "lessc style.less dist/style.css && echo less compile complete",
+    "build": "npm run compile && npm run webpack && npm run copy-static-files && npm run compile-less",
+    "compile": "tsc -v && tsc && echo Typescript compile complete"
   }
 }

@@ -8,13 +8,21 @@
     "suppressTaskName": true,
     "tasks": [
         {
-            "taskName": "compileless",
-            "args": ["run","compileless"]
-        },
-        {
             "taskName": "compile",
             "args": [ "run", "compile" ],
             "isBuildCommand": true
+        },
+        {
+            "taskName": "compile-less",
+            "args": [ "run", "compile-less" ]
+        },
+        {
+            "taskName": "copy-static",
+            "args": [ "run", "copy-static-files" ]
+        },
+        {
+            "taskName": "webpack",
+            "args": [ "run", "webpack" ]
         },
         {
             "taskName": "update",
