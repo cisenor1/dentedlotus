@@ -1,0 +1,644 @@
+.gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,2b2b2b+80,595959+100 */
+  background: #4c4c4c;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#595959', GradientType=0);
+  /* IE6-9 */
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  color: #f2f2f2;
+  background-color: #f2f2f2;
+  background-image: url("../images/brushed.png");
+  font-family: 'Arimo', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+body .wrapper,
+html .wrapper {
+  max-width: 960px;
+  margin: auto;
+}
+body .background,
+html .background {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+body h1,
+html h1 {
+  font-family: 'Orbitron', Georgia, Times, serif;
+  text-shadow: 2px 2px #0e0e0e;
+  margin: 0;
+  padding: 0;
+}
+body li,
+html li {
+  list-style: none;
+}
+body .panel,
+html .panel {
+  border: 1px solid #b5b3b4;
+  box-shadow: 0 2px 1px rgba(130, 128, 129, 0.2);
+  border-radius: 3px;
+  background-color: #828081;
+}
+body .blog-posts,
+html .blog-posts {
+  padding: 0;
+}
+body .blog-posts .blog-entry,
+html .blog-posts .blog-entry {
+  border: 1px solid #b5b3b4;
+  box-shadow: 0 2px 1px rgba(130, 128, 129, 0.2);
+  border-radius: 3px;
+  background-color: #828081;
+  max-width: 60em;
+  margin-bottom: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+body .blog-posts .blog-entry .date,
+html .blog-posts .blog-entry .date {
+  width: 100%;
+}
+body .blog-posts .blog-entry .title,
+html .blog-posts .blog-entry .title {
+  font-size: 32px;
+}
+body .race-countdown,
+html .race-countdown {
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding-left: 1em;
+  border: 1px solid #b5b3b4;
+  box-shadow: 0 2px 1px rgba(130, 128, 129, 0.2);
+  border-radius: 3px;
+  background-color: #828081;
+}
+body .race-countdown .timer,
+html .race-countdown .timer {
+  margin-right: 1rem;
+}
+body .button,
+html .button {
+  background-color: #4CAF50;
+  border-left: 1px solid #92cf94;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  display: inline-block;
+  padding: 0 0.4rem;
+}
+body .button:hover,
+html .button:hover {
+  cursor: pointer;
+  animation: MoveUpDown .2s linear;
+}
+body .button:active,
+html .button:active {
+  border: inset 1px #92cf94;
+}
+body .banner,
+html .banner {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,2b2b2b+80,595959+100 */
+  background: #4c4c4c;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4c4c4c 0%, #2b2b2b 80%, #595959 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#595959', GradientType=0);
+  /* IE6-9 */
+  margin-top: 0;
+  display: block;
+  height: 2rem;
+  width: 100%;
+}
+body .banner h1,
+html .banner h1 {
+  color: #FFFFFF;
+  display: inline-block;
+  width: 25%;
+  font-size: 1.2rem;
+  margin-left: 1em;
+  line-height: 2rem;
+}
+body .banner .login,
+html .banner .login,
+body .banner .logout,
+html .banner .logout {
+  height: 100%;
+  width: 8.333333333333%;
+  line-height: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
+}
+body .banner .menu,
+html .banner .menu {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 25%;
+  float: right;
+}
+body .banner .menu li,
+html .banner .menu li {
+  height: 100%;
+  line-height: 2rem;
+  width: 33.333333333333333333%;
+  display: inline-block;
+  text-align: center;
+}
+body .banner .menu li:hover,
+html .banner .menu li:hover {
+  background: #4CAF50;
+  cursor: pointer;
+}
+body .banner .login:hover,
+html .banner .login:hover,
+body .banner .logout:hover,
+html .banner .logout:hover {
+  background: #4CAF50;
+  cursor: pointer;
+}
+body .header-section,
+html .header-section {
+  height: 20em;
+  border: 1px solid silver;
+  margin-bottom: 4rem;
+  width: 100%;
+  background-image: url("../images/honda.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes MoveUpDown {
+  0% {
+    position: relative;
+    bottom: 0;
+  }
+  50% {
+    position: relative;
+    bottom: 1px;
+  }
+  100% {
+    bottom: 0;
+    position: relative;
+  }
+}
+/* -- container -- */
+.rodal,
+.rodal-mask {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.rodal {
+  position: fixed;
+}
+/* -- mask -- */
+.rodal-mask {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* -- dialog -- */
+.rodal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  padding: 15px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* -- close button -- */
+.rodal-close {
+  position: absolute;
+  cursor: pointer;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+}
+.rodal-close:before,
+.rodal-close:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #999;
+  border-radius: 100%;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+.rodal-close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.rodal-close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.rodal-close:hover:before,
+.rodal-close:hover:after {
+  background: #333;
+}
+/* -- fade -- */
+@-webkit-keyframes rodal-fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes rodal-fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+.rodal-fade-enter {
+  -webkit-animation: rodal-fade-enter both ease-in;
+  animation: rodal-fade-enter both ease-in;
+}
+@-webkit-keyframes rodal-fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rodal-fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+.rodal-fade-leave {
+  -webkit-animation: rodal-fade-leave both ease-out;
+  animation: rodal-fade-leave both ease-out;
+}
+/* -- zoom -- */
+@-webkit-keyframes rodal-zoom-enter {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes rodal-zoom-enter {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+.rodal-zoom-enter {
+  -webkit-animation: rodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-zoom-leave {
+  to {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes rodal-zoom-leave {
+  to {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+.rodal-zoom-leave {
+  -webkit-animation: rodal-zoom-leave both;
+  animation: rodal-zoom-leave both;
+}
+/* -- slideDown -- */
+@-webkit-keyframes rodal-slideDown-enter {
+  from {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+}
+@keyframes rodal-slideDown-enter {
+  from {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+}
+.rodal-slideDown-enter {
+  -webkit-animation: rodal-slideDown-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-slideDown-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-slideDown-leave {
+  to {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+}
+@keyframes rodal-slideDown-leave {
+  to {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+}
+.rodal-slideDown-leave {
+  -webkit-animation: rodal-slideDown-leave both;
+  animation: rodal-slideDown-leave both;
+}
+/* -- slideLeft -- */
+@-webkit-keyframes rodal-slideLeft-enter {
+  from {
+    -webkit-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+  }
+}
+@keyframes rodal-slideLeft-enter {
+  from {
+    -webkit-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+  }
+}
+.rodal-slideLeft-enter {
+  -webkit-animation: rodal-slideLeft-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-slideLeft-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-slideLeft-leave {
+  to {
+    -webkit-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+  }
+}
+@keyframes rodal-slideLeft-leave {
+  to {
+    -webkit-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+  }
+}
+.rodal-slideLeft-leave {
+  -webkit-animation: rodal-slideLeft-leave both;
+  animation: rodal-slideLeft-leave both;
+}
+/* -- slideRight -- */
+@-webkit-keyframes rodal-slideRight-enter {
+  from {
+    -webkit-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
+  }
+}
+@keyframes rodal-slideRight-enter {
+  from {
+    -webkit-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
+  }
+}
+.rodal-slideRight-enter {
+  -webkit-animation: rodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-slideRight-leave {
+  to {
+    -webkit-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
+  }
+}
+@keyframes rodal-slideRight-leave {
+  to {
+    -webkit-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
+  }
+}
+.rodal-slideRight-leave {
+  -webkit-animation: rodal-slideRight-leave both;
+  animation: rodal-slideRight-leave both;
+}
+/* -- slideUp -- */
+@-webkit-keyframes rodal-slideUp-enter {
+  from {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+}
+@keyframes rodal-slideUp-enter {
+  from {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+}
+.rodal-slideUp-enter {
+  -webkit-animation: rodal-slideUp-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-slideUp-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-slideUp-leave {
+  to {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+}
+@keyframes rodal-slideUp-leave {
+  to {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+}
+.rodal-slideUp-leave {
+  -webkit-animation: rodal-slideUp-leave both;
+  animation: rodal-slideUp-leave both;
+}
+/* -- flip -- */
+@-webkit-keyframes rodal-flip-enter {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 60deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 60deg);
+  }
+  70% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@keyframes rodal-flip-enter {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 60deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 60deg);
+  }
+  70% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+.rodal-flip-enter {
+  -webkit-animation: rodal-flip-enter both ease-in;
+  animation: rodal-flip-enter both ease-in;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+@-webkit-keyframes rodal-flip-leave {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 45deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 45deg);
+  }
+}
+@keyframes rodal-flip-leave {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 45deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 45deg);
+  }
+}
+.rodal-flip-leave {
+  -webkit-animation: rodal-flip-leave both;
+  animation: rodal-flip-leave both;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+/* -- rotate -- */
+@-webkit-keyframes rodal-rotate-enter {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, -180deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotate3d(0, 0, 1, -180deg) scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes rodal-rotate-enter {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, -180deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotate3d(0, 0, 1, -180deg) scale3d(0.3, 0.3, 0.3);
+  }
+}
+.rodal-rotate-enter {
+  -webkit-animation: rodal-rotate-enter both;
+  animation: rodal-rotate-enter both;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+@-webkit-keyframes rodal-rotate-leave {
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes rodal-rotate-leave {
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(0.3, 0.3, 0.3);
+  }
+}
+.rodal-rotate-leave {
+  -webkit-animation: rodal-rotate-leave both;
+  animation: rodal-rotate-leave both;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+/* -- door -- */
+@-webkit-keyframes rodal-door-enter {
+  from {
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+  }
+}
+@keyframes rodal-door-enter {
+  from {
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+  }
+}
+.rodal-door-enter {
+  -webkit-animation: rodal-door-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-door-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+@-webkit-keyframes rodal-door-leave {
+  60% {
+    -webkit-transform: scale3d(0.01, 1, 1);
+    transform: scale3d(0.01, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(0, 1, 0.1);
+    transform: scale3d(0, 1, 0.1);
+  }
+}
+@keyframes rodal-door-leave {
+  60% {
+    -webkit-transform: scale3d(0.01, 1, 1);
+    transform: scale3d(0.01, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(0, 1, 0.1);
+    transform: scale3d(0, 1, 0.1);
+  }
+}
+.rodal-door-leave {
+  -webkit-animation: rodal-door-leave both;
+  animation: rodal-door-leave both;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
