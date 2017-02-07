@@ -9,7 +9,9 @@
         "compiled":true,
         "dist":true,
         "node_modules":true,
-        "config":true
+        "config":true,
+        "app/**/*.js": true,
+        "src/**/*.js": true
     }
 
 

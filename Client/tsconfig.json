@@ -12,11 +12,12 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "sourceMap": false, 
-    "jsx": "react",
-    "outDir": "./compiled"
+    "jsx": "react"
   },
   "include": [
-    "./src/**/*"
+    "src",
+    "app",
+    "app.ts"
   ],
   "exclude": [
     "node_modules"
