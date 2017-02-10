@@ -1,6 +1,7 @@
 "use strict";
 var bluebird_1 = require("bluebird");
 var User_1 = require("./models/User");
+var Race_1 = require("./models/Race");
 var StateManager = (function () {
     function StateManager() {
         this.modalVisible = false;
@@ -26,6 +27,13 @@ var StateManager = (function () {
         this._initGoogle();
         this._initFacebook();
     }
+    Object.defineProperty(StateManager.prototype, "races", {
+        get: function () {
+            return Race_1.races;
+        },
+        enumerable: true,
+        configurable: true
+    });
     StateManager.prototype._initGoogle = function () {
         var _this = this;
         if (!window["onSignIn"]) {

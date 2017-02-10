@@ -1,5 +1,5 @@
 import * as React from "react";
-import {PropsBase} from "../utilities/Utilities";
+import {PropsBase} from "../utilities/ComponentUtilities";
 
 export interface HeaderProps extends PropsBase{
 

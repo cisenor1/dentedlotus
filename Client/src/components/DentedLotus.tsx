@@ -7,7 +7,9 @@ import { StateManager } from "../StateManager";
 import { BlogComponent } from "./BlogComponent";
 import { HeaderSection } from "./HeaderSection";
 import { RaceCountdown } from "./widgets/RaceCountdown";
-import { PropsBase } from "../utilities/Utilities";
+import { RacePage, AllRaces } from "./Pages";
+import { PropsBase } from "../utilities/ComponentUtilities";
+import { getUrlParameters } from "../utilities/PageUtilities"
 
 export interface DentedLotusProps extends PropsBase {
 
@@ -19,7 +21,7 @@ export class DentedLotus extends React.Component<DentedLotusProps, any>{
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0, 
+            bottom: 0,
             overflow: 'hidden',
         },
         sidebar: {
@@ -66,10 +68,11 @@ export class DentedLotus extends React.Component<DentedLotusProps, any>{
      */
     constructor(props: DentedLotusProps) {
         super(props);
+        const parameters = getUrlParameters();
         this.stateManager = props.stateManager;
-        this.state = { sidebarOpen: false };
-
+        this.state = { parameters: parameters, sidebarOpen: false };
     }
+
     onMenuClicked() {
         this.setState({ sidebarOpen: true });
     }
@@ -78,15 +81,38 @@ export class DentedLotus extends React.Component<DentedLotusProps, any>{
         this.setState({ sidebarOpen: true });
     }
 
+    launchRacePicks() {
+        let parameters = this.state.parameters;
+        parameters.page = "race";
+        this.setState({ parameters: parameters, race: this.stateManager.getNextRace() });
+    }
+
+    getCurrentView() {
+        switch (this.state.parameters.page) {
+            case "race":
+                return <RacePage race={this.state.race} small={false} ></RacePage>;
+            case "user":
+                return <div>User!!!!</div>;
+            case "all-races":
+                return <AllRaces races={this.stateManager.races} />;
+            default:
+                return this.getHomePage();
+        }
+    }
+
+    getHomePage(){
+        return <div>
+                    <RaceCountdown onclick={this.launchRacePicks.bind(this)} stateManager={this.stateManager} displayName={this.stateManager.nextRace.displayName} cutoffDate={this.stateManager.nextRace.date} />
+                    <BlogComponent stateManager={this.stateManager} />
+                </div>;
+    }
+
     render() {
         return <div>
             <Banner stateManager={this.stateManager} title="Project Dented Lotus" onMenuClicked={this.onMenuClicked} />
             <HeaderSection stateManager={this.stateManager} />
             <div className="wrapper">
-                <div>
-                    <RaceCountdown stateManager={this.stateManager} displayName={this.stateManager.nextRace.displayName} cutoffDate={this.stateManager.nextRace.date} />
-                    <BlogComponent stateManager={this.stateManager} />
-                </div>
+                {this.getCurrentView()}
             </div>
         </div>
     }

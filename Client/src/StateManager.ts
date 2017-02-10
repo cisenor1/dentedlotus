@@ -3,6 +3,8 @@ import { Blog } from "./models/Blog";
 
 import { Promise } from "bluebird";
 import { User, GoogleUser, FacebookUser } from "./models/User";
+import { Race, races } from "./models/Race";
+
 declare var FB: FBSDK;
 export class StateManager {
     modalVisible = false;
@@ -24,6 +26,10 @@ export class StateManager {
     nextRace = {
         displayName: "Australian GP",
         date: "March 26, 2017"
+    };
+
+    get races() {
+        return races;
     }
 
     currentUser: User = new User();

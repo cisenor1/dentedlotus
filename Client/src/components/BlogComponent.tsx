@@ -2,7 +2,7 @@ import * as React from "react";
 import { Blog } from "../models/Blog";
 import { StateManager } from "StateManager";
 import { Promise } from "bluebird";
-import { PropsBase } from "../utilities/Utilities";
+import { PropsBase } from "../utilities/ComponentUtilities";
 export interface BlogProps extends PropsBase {
 }
 

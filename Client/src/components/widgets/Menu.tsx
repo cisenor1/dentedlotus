@@ -1,7 +1,7 @@
 import * as React from "react";
 import { MenuItemProps } from "./MenuItem";
 import { MenuItem } from "./MenuItem";
-import { PropsBase } from "../../utilities/Utilities";
+import { PropsBase } from "../../utilities/ComponentUtilities";
 
 export interface MenuProps extends PropsBase {
 

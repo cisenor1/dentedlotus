@@ -18,13 +18,14 @@ var RaceCountdown = (function (_super) {
         _this.props.stateManager.getNextRace().then(function (race) {
             _this.nextRace = race;
         });
+        _this.onclick = props.onclick;
         return _this;
     }
     RaceCountdown.prototype.componentDidMount = function () {
         this.interval = setInterval(this.tick, 1000);
     };
     RaceCountdown.prototype.componentWillUnmount = function () {
-        setInterval(this.interval);
+        clearInterval(this.interval);
     };
     RaceCountdown.prototype.tick = function () {
         if (!this.nextRace) {
@@ -59,7 +60,7 @@ var RaceCountdown = (function (_super) {
             React.createElement("span", null, this.nextRace.displayName),
             ":\u00A0",
             React.createElement("span", { className: "timer" }, this.state.timeRemaining),
-            React.createElement("span", { className: "button" }, "Make Your Picks"));
+            React.createElement("span", { onClick: this.onclick, className: "button" }, "Make Your Picks"));
     };
     return RaceCountdown;
 }(React.Component));

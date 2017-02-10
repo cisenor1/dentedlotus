@@ -1,5 +1,6 @@
 import * as React from "react";
 import {StateManager} from "../StateManager";
+
 export interface PropsBase{
     stateManager:StateManager;
 }

@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import { StateManager } from "../../StateManager";
-import { PropsBase } from "../../utilities/Utilities";
+import { PropsBase } from "../../utilities/ComponentUtilities";
 import { Promise } from "bluebird";
 import { User, FacebookUser, GoogleUser } from "../../models/User";
 import GoogleLogin from 'react-google-login';
