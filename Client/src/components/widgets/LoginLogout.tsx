@@ -70,8 +70,8 @@ export class LoginLogout extends React.Component<LoginLogoutProps, any>{
         let sidebarContent = "<b>Sidebar content</b>";
         if (this.state.loggedIn) {
             return <div className="login">
-                <span onClick={this.onMenuClicked.bind(this)}>Menu
-                    <Menu right isOpen={this.state.sidebarOpen} noOverlay>
+                <span onClick={this.onMenuClicked.bind(this)}>
+                    <Menu isOpen={this.state.sidebarOpen} noOverlay>
                         <a id="home" className="menu-item" href="/">Home</a>
                         <a id="about" className="menu-item" href="/about">About</a>
                         <a id="contact" className="menu-item" href="/contact">Contact</a>

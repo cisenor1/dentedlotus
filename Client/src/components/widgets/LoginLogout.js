@@ -54,8 +54,7 @@ var LoginLogout = (function (_super) {
         if (this.state.loggedIn) {
             return React.createElement("div", { className: "login" },
                 React.createElement("span", { onClick: this.onMenuClicked.bind(this) },
-                    "Menu",
-                    React.createElement(Menu, { right: true, isOpen: this.state.sidebarOpen, noOverlay: true },
+                    React.createElement(Menu, { isOpen: this.state.sidebarOpen, noOverlay: true },
                         React.createElement("a", { id: "home", className: "menu-item", href: "/" }, "Home"),
                         React.createElement("a", { id: "about", className: "menu-item", href: "/about" }, "About"),
                         React.createElement("a", { id: "contact", className: "menu-item", href: "/contact" }, "Contact"))));
